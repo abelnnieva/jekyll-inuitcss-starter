@@ -1,0 +1,11 @@
+/* TEAM */
+  Frontend Developer: Abel Nieva
+  Contact: abel [at] abelnieva.com
+  Twitter: @abelnieva
+  From: Madrid, Madrid, Spain
+
+/* SITE */
+  Last update: 2017/02/15
+  Language: English / Castellano
+  Doctype: HTML5
+  IDE: Visual Studio Code

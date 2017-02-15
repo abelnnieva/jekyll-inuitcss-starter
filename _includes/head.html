@@ -1,0 +1,55 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  {% if page.title %}
+    {% assign title = page.title | append: " &mdash; " | append: site.title %}
+  {% else %}
+    {% assign title = site.title | append: " &mdash; " | append: site.subtitle %}
+  {% endif %}
+  <title>{{ title }}</title>
+
+  <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  <link rel="dns-prefetch" href="//chart.apis.google.com">
+
+  <!-- Who did this page -->
+  <link type="text/plain" rel="author" href="{{ '/humans.txt' | relative_url }}">
+  <meta name="author" content="{{ site.name }}">
+
+  <!-- Stylesheet -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Ubuntu:400" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+
+  <!-- Meta-Tagging -->
+  {% assign description = page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape %}
+  <meta name="description" content="{{ description | escape }}">
+  <meta name="robots" content="index, follow">
+
+  <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}">
+  <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.jpg' | relative_url }}">
+  <meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+  <meta name="application-name" content="{{ site.title }}">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@{{ site.twitter_username }}">
+  <meta name="twitter:domain" content="{{ '/' | absolute_url }}">
+  <meta name="twitter:creator" content="@{{ site.twitter_username }}">
+  <meta name="twitter:title" content="{{ title }}">
+
+  {% assign image = page.image | default: '/apple-touch-icon.jpg' | absolute_url %}
+  <meta name="twitter:image" content="{{ image }}">
+  <meta name="twitter:description" content="{{ description | escape }}">
+
+  {% if page.url == "/404.html" %}
+    <meta http-equiv="refresh" content="5; url=/">
+  {% endif %}
+
+  <link rel="image_src" href="{{ image }}">
+  <link rel="canonical" href="{{ page.url | replace: 'index.html', '' | absolute_url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+  <link rel="index" title="{{ title }}" href="{{ '/' | relative_url }}">
+
+</head>
