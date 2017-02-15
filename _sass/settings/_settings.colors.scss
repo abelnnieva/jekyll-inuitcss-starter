@@ -1,0 +1,44 @@
+/* ==========================================================================
+   #COLORS
+   ========================================================================== */
+
+// Color palette
+
+$color-bleu-de-france:      #318CE7;
+$color-onyx:                #30373b;
+$color-platinum:            #e5e5e5;
+$color-sonic-silver:        #767676;
+$color-white:               #fff;
+
+
+
+
+
+// UI color application
+
+$color-brand:                       $color-bleu-de-france;
+$color-text:                        $color-onyx;
+$color-border:                      $color-platinum;
+
+
+
+
+
+// Links
+
+$color-links:                       $color-brand;
+$color-links-hover:                 $color-text;
+
+
+
+
+
+// Buttons
+
+$color-btn-primary:                 $color-white;
+$color-btn-primary-background:      $color-brand;
+$color-btn-primary-hover:           $color-text;
+
+$color-btn-secondary:               $color-white;
+$color-btn-secondary-background:    $color-sonic-silver;
+$color-btn-secondary-hover:         $color-text;
